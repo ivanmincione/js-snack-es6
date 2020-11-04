@@ -46,7 +46,7 @@ let bikesFit = bikes[0];
     // stampa in html
     let {name, weight} = bikesFit;
 
-    var getElementById("container-bike").innerHTML =
+    document.getElementById("container-bike").innerHTML =
      `
      <ul>
         <li>
