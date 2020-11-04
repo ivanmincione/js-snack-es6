@@ -4,7 +4,7 @@ $(document).ready(function() {
 
 // creo un array di oggetti
 
-var city = [
+const city = [
     {
         'name': 'Roma',
     },
@@ -20,32 +20,26 @@ var city = [
 ];
 console.log(city);
 
-var cloneCity = [];
+// creo una copia dell'array di partenza con SPREAD
 
+const copyCity = [...city];
+console.log(copyCity);
 
-for (var i = 0; i < city.length; i++) {
+//aggiungo la nuova proprietà POSITION
+copyCity.map((element, i) => {
+    element.position = generateRandomLetter();
 
-    var letterRandom = generateRandomLetter();
-    // push nel nuovo array i dati dell'array originale
-    cloneCity.push(city[i]);
-    // aggiungo una nuova proprietà all'array clonato
-    cloneCity[i].position = letterRandom;
-
-};
-
-console.log(cloneCity);
-
-
-// ---end ready---
 });
 
 
-// funzione per generare una lettera random
 
+
+
+// funzione per generare una lettera random
 function generateRandomLetter() {
   const alphabet = "abcdefghijklmnopqrstuvwxyz"
 
   return alphabet[Math.floor(Math.random() * alphabet.length)]
 };
 
-console.log(generateRandomLetter())
+});
