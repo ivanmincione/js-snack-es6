@@ -11,6 +11,7 @@ let names = ["Mario", "Paolo", "Luca", "Giovanni", "Sara", ];
 
 const newNames= [];
 
+// utilizzo ciclo forEach
     newNames.forEach((element, i) => {
         if (firstNum < i && secondNum > i) {
             newNames.push(element)
@@ -18,7 +19,10 @@ const newNames= [];
     });
 
 
+// alternativa con FILTER
 
+// const newNames = names.filter((element, i) =>)
+//  return firstNum < i && secondNum > i;
 
 // ---end ready---
 });
